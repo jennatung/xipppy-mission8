@@ -92,15 +92,14 @@
 
 .passenger-form {
     &:hover {
-        background: $neutral-40;
-
+        background: $primary-10;
         button {
             @media (min-width: 992px) {
                 display: block;
             }
         }
     }
-
+    
     button {
         @media (min-width: 992px) {
             display: none;
