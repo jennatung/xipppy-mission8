@@ -1,4 +1,113 @@
-<h1 class="header">header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<nav class="navbar bg-white py-4 fixed-top">
+    <div class="container position-relative">
+        <div class="d-flex align-items-center me-auto">
+            <!-- logo -->
+            <a class="navbar-brand p-0 me-7" href="#">
+                <img src="/assets/images/LOGO.svg" alt="logo">
+            </a>
+            <!-- PC版 搜尋輸入欄-->
+            <form class="position-relative d-none d-lg-block">
+                <input type="email" class="form-control py-2 px-3 ps-10 nav-lg-Search" id="nav-lg-Search"
+                    placeholder="搜尋景點、地點或城市">
+                <span
+                    class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y ps-4 text-netral-60">
+                    search
+                </span>
+            </form>
+        </div>
+
+        <!-- 搜尋輸入欄 彈出視窗 -->
+        <div class="position-absolute z-1 start-0 end-0 bg-white">
+            <div class="collapse" id="closeSearch">
+                <div class="d-flex align-items-center">
+                    <form class="position-relative w-100">
+                        <input type="email" class="form-control py-2 px-3 ps-10" id="exampleFormControlInput1"
+                            placeholder="搜尋景點、地點或城市">
+                        <span
+                            class="material-icons-outlined align-bottom position-absolute top-50 start-0 translate-middle-y ps-4 text-netral-60">
+                            search
+                        </span>
+                    </form>
+                    <!-- 關閉搜尋欄按鈕 -->
+                    <button type="button" class="btn p-2 border-0" data-bs-toggle="collapse" href="#closeSearch">
+                        <span class="material-icons-outlined align-bottom">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 展開搜尋欄按鈕 -->
+        <button type="button" class="btn p-2 border-0 d-lg-none" data-bs-toggle="collapse" href="#closeSearch">
+            <span class="material-icons-outlined align-bottom">
+                search
+            </span>
+        </button>
+        <a href="#" class="btn border-0 py-2 d-lg-none">
+            <span class="material-icons-outlined align-bottom">
+                shopping_cart
+            </span>
+            <span class="position-relative">
+                <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-alert cart-tag p-0">
+                    2
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </span>
+        </a>
+        <button class="btn border-0 p-2 d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="material-icons-outlined">
+                menu
+            </span>
+        </button>
+
+        <!-- PC按鈕 -->
+        <a href="#" class="btn border-0 px-3 py-2 me-5 text-neutral-80 d-lg-block d-none">
+            <span class="material-icons-outlined align-bottom">
+                shopping_cart
+            </span>
+        </a>
+        <a href="#" class="btn bg-primary-100 text-white fw-bold fs-8 px-8 py-5 border-0 rounded-5 d-lg-block d-none"
+            type="button">
+            登入 / 註冊
+        </a>
+        <!-- PC按鈕 -->
+
+        <!-- 右側展開 -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="container h-100">
+                <div class="d-flex flex-column justify-content-between h-100 px-7 pb-7">
+                    <div class="d-flex align-items-center border-bottom pb-5 mb-5">
+                        <img src="/assets/images/ic_profile.svg" class="rounded-circle bg-primary-40 me-2"
+                            style="height: 32px; width: 32px;" alt="">
+                        <div>
+                            <p class="fs-8 m-0 fw-bold text-primary-100">訪客</p>
+                            <p class="fs-8 m-0 text-netral-40">未登入</p>
+                        </div>
+                    </div>
+                    <div class="pt-7">
+                        <p class="fs-6 text-primary-100 fw-bold">
+                            歡迎來到 ZOBAA
+                        </p>
+                        <span class="fs-8 fw-normal text-netral-80">
+                            加入會員即可立即訂購、收藏行程，並<br>
+                            享相關優惠好禮。
+                        </span>
+                    </div>
+                    <a href="#"
+                        class="mt-auto btn bg-primary-100 text-white fw-bold fs-8 px-8 py-5 border-0 rounded-5"
+                        type="button">
+                        登入 / 註冊
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

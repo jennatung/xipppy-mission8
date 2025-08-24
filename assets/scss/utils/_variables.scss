@@ -5,6 +5,37 @@
 
 // Color system
 
+//sys color
+$primary-120:#2B211C;
+$primary-100 :#4A3830;
+$primary-80 : #886658;
+$primary-40 : #CBB6AF;
+$primary-60 : #A37F71;
+$primary-10 : #F3EEEC;
+
+$success-120 : #48970F;
+$success-100 : #7CD31F;
+$success-20 : #DDFAA5;
+$success-10 : #F0FCD1;
+
+$info-120 : #1566B5;
+$info-100 : #2AAFFC;
+$info-20 : #A9EFFE;
+$info-10 : #D4F9FE;
+
+$alert-120:#B71D4F;
+$alert-100:#FF3A55;
+$alert-20:#FFBBB0;
+$alert-10:#FFE0D7;
+
+$neutral-100:#000000;
+$neutral-80:#4B4B4B;
+$neutral-60:#909090;
+$neutral-40:#ECECEC;
+$neutral-15:#F4F4F4;
+$neutral-10:#F9F9F9;
+$neutral-0:#FFFFFF;
+
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -298,24 +329,60 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+//$primary:       $blue !default;
+$primary:       $primary-100 !default;
 $secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
+//$success:       $green !default;
+$success:       $success-100 !default;
+//$info:          $cyan !default;
+$info:          $info-100 !default;
 $warning:       $yellow !default;
-$danger:        $red !default;
+//$danger:        $red !default;
+$danger:        $alert-100 !default;
 $light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+//$dark:          $gray-900 !default;
+$dark:          $primary-120 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
+  "primary-120": $primary-120,
+  "primary-100": $primary-100,
+  "primary-80": $primary-80,
+  "primary-40": $primary-40,
+  "primary-60": $primary-60,
+  "primary-10": $primary-10,
+  
+  "success-120": $success-120,
+  "success-100": $success-100,
+  "success-20": $success-20,
+  "success-10": $success-10,
+
+  "info-120": $info-120,
+  "info-100": $info-100,
+  "info-20": $info-20,
+  "info-10": $info-10,
+
+  "alert-120": $alert-120,
+  "alert-100": $alert-100,
+  "alert-20": $alert-20,
+  "alert-10": $alert-10,
+
+  "neutral-100": $neutral-100,
+  "neutral-80": $neutral-80,
+  "neutral-60": $neutral-60,
+  "neutral-40": $neutral-40,
+  "neutral-15": $neutral-15,
+  "neutral-10": $neutral-10,
+  "neutral-0": $neutral-0,
+
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
-  "danger":     $danger,
+  //"danger":     $danger,
+  "alert":     $danger,
   "light":      $light,
   "dark":       $dark
 ) !default;
@@ -378,7 +445,8 @@ $enable-grid-classes:         true !default;
 $enable-container-classes:    true !default;
 $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
-$enable-rfs:                  true !default;
+//$enable-rfs:                  true !default;
+$enable-rfs:                  false !default;
 $enable-validation-icons:     true !default;
 $enable-negative-margins:     false !default;
 $enable-deprecation-messages: true !default;
@@ -409,12 +477,30 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
 $spacers: (
+  // 0: 0,
+  // 1: $spacer * .25,
+  // 2: $spacer * .5,
+  // 3: $spacer,
+  // 4: $spacer * 1.5,
+  // 5: $spacer * 3,
+
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  1: $spacer * .25, //4
+  2: $spacer * .5, //8
+  3: $spacer * 0.75, //12
+  4: $spacer * 0.875, //14
+  5: $spacer, //16
+  6: $spacer * 1.25, //20
+  7: $spacer * 1.5, //24
+  8: $spacer * 2, //32
+  10: $spacer * 2.5, //40
+  11: $spacer * 3, //48
+  12: $spacer * 3.5, //56
+  13: $spacer * 4, //64
+  14: $spacer * 4.5, //72
+  15: $spacer * 5, //80
+  18: $spacer * 7.5, //120
+  20: $spacer * 10, //160
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -548,7 +634,8 @@ $border-radius:               .375rem !default;
 $border-radius-sm:            .25rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
+// $border-radius-xxl:           2rem !default;
+$border-radius-xxl:           1.5rem !default;
 $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
@@ -630,12 +717,22 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+// $h1-font-size:                $font-size-base * 2.5 !default; //40
+// $h2-font-size:                $font-size-base * 2 !default; //32
+// $h3-font-size:                $font-size-base * 1.75 !default; //28
+// $h4-font-size:                $font-size-base * 1.5 !default; //24
+// $h5-font-size:                $font-size-base * 1.25 !default; //20
+// $h6-font-size:                $font-size-base !default; //16
+
+$h1-font-size:                $font-size-base *4.5 !default; //72
+$h2-font-size:                $font-size-base * 3 !default; //48
+$h3-font-size:                $font-size-base * 2.5 !default; //40
+$h4-font-size:                $font-size-base * 2 !default; //32
+$h5-font-size:                $font-size-base * 1.75 !default; //28
+$h6-font-size:                $font-size-base * 1.5 !default; //24
+$h7-font-size:                $font-size-base * 1.25 !default; //20
+$h8-font-size:                $font-size-base !default; //16
+$h9-font-size:                $font-size-base *0.875 !default; //14
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -645,7 +742,10 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -774,7 +874,8 @@ $table-variants: (
   "success":    shift-color($success, $table-bg-scale),
   "info":       shift-color($info, $table-bg-scale),
   "warning":    shift-color($warning, $table-bg-scale),
-  "danger":     shift-color($danger, $table-bg-scale),
+  //"danger":     shift-color($danger, $table-bg-scale),
+  "alert":     shift-color($danger, $table-bg-scale),
   "light":      $light,
   "dark":       $dark,
 ) !default;

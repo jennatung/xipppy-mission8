@@ -1,8 +1,36 @@
+//@import "../../node_modules/bootstrap/scss/functions";
+// 1. 必要 function/variables
 @import "../../node_modules/bootstrap/scss/functions";
+
+// 2. 你自己的 variables override
 @import './utils/variables';
+
 @import "../../node_modules/bootstrap";
+
+// 3. Bootstrap 其他部分 (mixins, root, reboot, etc.)
+// @import "../../node_modules/bootstrap/scss/maps";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/root";
+// @import "../../node_modules/bootstrap/scss/reboot";
+// @import "../../node_modules/bootstrap/scss/type";
+// @import "../../node_modules/bootstrap/scss/images";
+// @import "../../node_modules/bootstrap/scss/containers";
+// @import "../../node_modules/bootstrap/scss/grid";
+// @import "../../node_modules/bootstrap/scss/helpers";
+
+@import './utils/utilities';
+@import "bootstrap/scss/utilities/api";
+//@import "../../node_modules/bootstrap/scss/utilities/api";
+
+@import "./base/base.scss";
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
 @import './pages/index.scss';
+@import './pages/member.scss';
+
+//引用字
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+//引用 icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");

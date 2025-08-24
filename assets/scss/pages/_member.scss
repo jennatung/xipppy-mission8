@@ -1,0 +1,109 @@
+.member-page {
+    //上方nav 空間73.6
+    padding-top: 113.6px;
+    padding-bottom: 40px;
+
+    @media (min-width: 992px) {
+        padding-top: 193.6px;
+        padding-bottom: 120px;
+
+        //背景圖片設定
+        background-image: url(/assets/images/Deco_bg.png);
+        background-position: center center;
+        background-size: auto 878px;
+        background-repeat: no-repeat;
+    }
+}
+
+.edit_icon {
+    right: 32px;
+    bottom: 32px;
+}
+
+.member-icon {
+    height: 120px;
+    width: 120px;
+    border: 2px solid $primary-100;
+    left: 50%;
+    top: -18px;
+
+    @media (min-width: 992px) {
+        height: 160px;
+        width: 160px;
+        border: 4px solid $primary-100;
+        left: 50%;
+        top: 0%;
+    }
+}
+
+.member-edit-icon {
+    left: 45%;
+    top: -50px;
+
+    @media (min-width: 992px) {
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.my-pd {
+    padding: 28px 24px;
+}
+
+.nav-link {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 0;
+        /* 預設沒有線 */
+        border-bottom: 0px solid transparent;
+        transition: all 0.3s;
+    }
+
+    &:active,
+    &:focus {
+        font-weight: 600;
+
+        &::after {
+            width: 32px;
+            /* 線的長度 線的顏色 */
+            border: 2px solid $primary-100;
+            border-radius: 999px;
+        }
+    }
+}
+
+// .nav-link.active::after {
+//     width: 32px;
+//     /* 線的長度 線的顏色 */
+//     border: 2px solid $primary-100;
+//     border-radius: 999px;
+// }
+
+.tarvel-name {
+    color: #112211;
+}
+
+.passenger-form {
+    &:hover {
+        background: $neutral-40;
+
+        button {
+            @media (min-width: 992px) {
+                display: block;
+            }
+        }
+    }
+
+    button {
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+//方法1
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "font-size": map-merge(
+//       map-get($utilities, "font-size"),
+//       ( responsive: true ),
+//     ),
+//     "rounded": map-merge(
+//       map-get($utilities, "rounded"),
+//       ( responsive: true ),
+//     ), 
+//   )
+// );
+
+
+// $utilities: map-merge( 
+//   $utilities,
+//   (
+//     "rounded": map-merge(
+//       map-get($utilities, "rounded"),
+//       ( responsive: true ),
+//     ), 
+//   )
+// );
+
+
+//方法2
+$utilities: (
+  "font-size": (
+      rfs: true,
+      property: font-size,
+      class: fs,
+      values: $font-sizes,
+      responsive: true
+    ),
+    
+ "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
+        4: 0.75rem, //12px
+        5: 1rem, //16px
+        6: 1.25rem, //20px
+        7: 1.5rem, //24px
+        8: 2rem, //32px
+        circle: 50%,
+        pill: $border-radius-pill
+      ),
+      responsive: true
+    ),
+  "border": (
+      property: border,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+        // 1: 1px solid $border-color,
+        // 2: 2px solid $border-color,
+        // 3: 3px solid $border-color,
+        // 4: 4px solid $border-color,
+        // 5: 5px solid $border-color,
+      ),
+      responsive: true
+  ),
+
+  "width": (
+     property: width,
+     class: w,
+     values: (
+       25: 25%,
+       50: 50%,
+       75: 75%,
+       100: 100%,
+       auto: auto
+     ),
+     responsive: true
+   )
+  
+);

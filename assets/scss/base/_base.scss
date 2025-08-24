@@ -1,0 +1,20 @@
+/* 標籤的基本樣式 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0 !important;
+}
